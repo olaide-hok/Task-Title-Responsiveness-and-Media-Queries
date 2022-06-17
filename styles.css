@@ -56,13 +56,24 @@ nav {
 
 @media (max-width: 375px) {
   nav {
-    flex-direction: column;
+    justify-content: space-between;
   }
   nav img {
-    margin-bottom: 40px;
+    max-width: 30%;
   }
   .header_img {
     margin: 40px 0 30px;
+    width: 360px;
+  }
+  nav button {
+    padding: 9px 25px;
+  }
+
+  .flex div h1 {
+    font-size: 1.8rem;
+  }
+  .flex div p {
+    font-size: 1rem;
   }
 }
 
@@ -94,6 +105,10 @@ nav {
   .card {
     flex-direction: column-reverse;
     text-align: center;
+  }
+
+  .card div img {
+    width: 100%;
   }
 }
 
