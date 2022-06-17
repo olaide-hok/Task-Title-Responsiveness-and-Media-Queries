@@ -85,7 +85,26 @@ section > ul {
   flex: 1;
 }
 
+section .cta {
+    left: 50%;
+    transform: translate(0, 50%);
+}
 
+.cta {
+    display: block;
+    align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  margin: 40px auto;
+  padding: 30px 20px;
+  width: 500px;
+  text-align: center;
+}
+.cta button {
+    display: block;
+    margin: auto;
+}
 /* @media (max-width: 375px) {
 flex-direction: column;
 text-align: center;
