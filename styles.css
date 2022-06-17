@@ -10,9 +10,19 @@ body {
   margin: 0;
 }
 p {
-  opacity: 0.6;
-  line-height: 1.5;
+    opacity: 0.6;
+    line-height: 1.5;
+  }
+
+@media (max-width: 375px) {
+    h2 {
+        font-size: 16px;
+    }
+  p {
+    font-size: 11px;
+  }
 }
+
 img {
   max-width: 100%;
 }
@@ -44,6 +54,18 @@ nav {
   margin-bottom: 40px;
 }
 
+@media (max-width: 375px) {
+  nav {
+    flex-direction: column;
+  }
+  nav img {
+    margin-bottom: 40px;
+  }
+  .header_img {
+    margin: 40px 0 30px;
+  }
+}
+
 /* Cards */
 .card {
   display: flex;
@@ -68,9 +90,12 @@ nav {
   flex: 1;
 }
 
-/* @media (max-width: ) {
-    flex-direction: column;
-  } */
+@media (max-width: 375px) {
+  .card {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+}
 
 /* Flex Class */
 .flex {
@@ -79,20 +104,28 @@ nav {
 }
 
 .flex div {
-    flex: 1;
+  flex: 1;
+  text-align: center;
+}
+
+@media (max-width: 375px) {
+  .flex {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 section > ul {
   flex: 1;
 }
 
 section .cta {
-    left: 50%;
-    transform: translate(0, 50%);
+  left: 50%;
+  transform: translate(1%, 50%);
 }
 
 .cta {
-    display: block;
-    align-items: center;
+  display: block;
+  align-items: center;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -102,13 +135,9 @@ section .cta {
   text-align: center;
 }
 .cta button {
-    display: block;
-    margin: auto;
+  display: block;
+  margin: auto;
 }
-/* @media (max-width: 375px) {
-flex-direction: column;
-text-align: center;
-} */
 
 footer {
   background-color: hsl(208, 11%, 55%);
@@ -129,15 +158,20 @@ footer p {
 }
 
 /* Media Queries for Footer Section */
-/* @media (max-width: 768px) {
-text-align: center;
-ul {
+@media (max-width: 375px) {
+  .flex {
+    display: block;
+    text-align: left;
+  }
+  .flex ul {
     padding: 0;
-}
-p {
+    align-items: left;
+  }
+
+  footer p {
     text-align: center;
+  }
 }
-} */
 
 /* Social icons */
 .social_icons {
@@ -164,23 +198,23 @@ p {
 
 /* Button */
 button {
-    border-radius: 50px;
-    border: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 700;
-    padding: 15px 60px;
-    background-color: #fff;
-    color: #333;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 15px 60px;
+  background-color: #fff;
+  color: #333;
 }
 
 button:hover {
-    opacity: 0.9;
-    transform: scale(0.98);
+  opacity: 0.9;
+  transform: scale(0.98);
 }
 
 .pink_btn {
-    background-color: hsl(322, 100%, 66%);
-    color: #fff;
+  background-color: hsl(322, 100%, 66%);
+  color: #fff;
 }
